@@ -1,0 +1,173 @@
+{
+  "tools": [
+    {
+      "id": 1,
+      "name": "młotek",
+      "brand": "Topex",
+      "price": 50,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Młotek – jedno z najstarszych narzędzi używanych przez człowieka, służące do uderzania w materiał w celu jego obróbki, do uderzania w inne narzędzie (na przykład dłuto, przecinak, wybijak, punktak) lub do wbijania gwoździ, klinów i tym podobnych elementów. Działa na zasadzie gromadzenia energii kinetycznej w ciężkim obuchu podczas stosunkowo długiego zamachu, a następnie przekazania jej w krótkim czasie uderzonemu obiektowi.\n\nSkłada się z dwóch podstawowych elementów: obucha i trzonka; całość przypomina literę T („daszek” odpowiada obuchowi).\n\nObuch najczęściej wykonany jest ze stali narzędziowej (stal narzędziowa węglowa N6, N7 lub N7E) i ma kształt zbliżony do wydłużonego prostopadłościanu z jednym z końców ściętym jedno- lub dwustronnie. Trzonek zwykle jest drewniany. Na ogół połączenie trzonka z obuchem wzmocnione jest przez klin. Wielkością charakteryzującą młotki jest masa obucha (np. młotek 150 g); masa największych ręcznych młotków (młotów) osiąga 20 kg."
+    },
+    {
+      "id": 2,
+      "name": "wkrętarka",
+      "brand": "Makita",
+      "price": 500,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Wkrętarka – urządzenie mechaniczne służące do wkręcania i wykręcania śrub, wkrętów itp. Dzięki łatwo wymiennym końcówkom z chwytem sześciokątnym narzędzie łatwo można dostosować do różnych zakończeń wkrętów."
+    },
+    {
+      "id": 3,
+      "name": "śrubokręt",
+      "brand": "stanley",
+      "price": 15,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie."
+    },
+    {
+      "id": 4,
+      "name": "poziomica",
+      "brand": "stanley",
+      "price": 45,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie."
+    },
+    {
+      "id": 5,
+      "name": "miarka",
+      "brand": "stanley",
+      "price": 30,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie."
+    },
+    {
+      "id": 6,
+      "name": "piła",
+      "brand": "irvin",
+      "price": 99,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie."
+    },
+    {
+      "id": 7,
+      "name": "dłuto",
+      "brand": "Narex",
+      "price": 69,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie."
+    },
+    {
+      "id": 8,
+      "name": "szlifierka",
+      "brand": "festool",
+      "price": 2500,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie."
+    },
+    {
+      "id": 9,
+      "name": "wiertła",
+      "brand": "Bosh",
+      "price": 99,
+      "urls": [
+        "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+        "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+      ],
+      "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie."
+    }
+  ],
+  "orders": [
+    {
+      "orderOwner": "",
+      "address": "",
+      "order": [
+        {
+          "id": 5,
+          "name": "miarka",
+          "brand": "stanley",
+          "price": 30,
+          "urls": [
+            "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+            "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+          ],
+          "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie.",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "wkrętarka",
+          "brand": "Makita",
+          "price": 500,
+          "urls": [
+            "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+            "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+          ],
+          "description": "Wkrętarka – urządzenie mechaniczne służące do wkręcania i wykręcania śrub, wkrętów itp. Dzięki łatwo wymiennym końcówkom z chwytem sześciokątnym narzędzie łatwo można dostosować do różnych zakończeń wkrętów.",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "śrubokręt",
+          "brand": "stanley",
+          "price": 15,
+          "urls": [
+            "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+            "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+          ],
+          "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie.",
+          "quantity": 1
+        },
+        {
+          "id": 6,
+          "name": "piła",
+          "brand": "irvin",
+          "price": 99,
+          "urls": [
+            "https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png",
+            "https://theimgstudio.com/wp-content/uploads/2018/06/Twitter_Cover-Blue.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_T8S5dbo7pZAm6BWtgZptcd6yoPmm5ytj1xAje76RdMxLjf6f&s"
+          ],
+          "description": "Wkrętak, powszechnie znany jako śrubokręt jest najczęściej używanym narzędziem ręcznym w domowych remontach i naprawach. To atrybut każdego majsterkowicza oraz profesjonalisty.\nGłównym elementem wkrętaka, mającym duży wpływ na jego zastosowanie jest zakończenie, które zależnie od typu dopasowuje się do nacięć łba wkrętu. Zakończenie nie jest jednak jedyną częścią decydującą o przeznaczeniu śrubokrętu. Zapoznanie się z występującymi na rynku rodzajami tego narzędzia pozwoli nam na dokonanie najlepszego wyboru przy zakupie.",
+          "quantity": 1
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

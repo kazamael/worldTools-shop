@@ -1,0 +1,182 @@
+.box_back {
+  margin-top: 70px;
+  background-color:rgba(0, 0, 86, 1);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  color:rgba(0, 0, 86, 1);
+  border-radius: 5px;
+  background-color: white;
+
+
+}
+
+.box_title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 45px;
+  margin: 0;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 86, 1);
+  color:white;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.box_products {
+  border: 1px solid rgb(17, 0, 255);
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.box_product:first-of-type {
+  border-top: 1px solid rgb(17, 0, 255);
+}
+
+.box_product {
+  border-bottom: 1px solid rgb(17, 0, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box_summary {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box_product_info {
+  width: 55%;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    padding-right: 15px;
+  }
+
+  span {
+    padding-right: 15px;
+  }
+
+}
+
+.box_product_buttons {
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 86, 1);
+    margin-left: 15px;
+    font-size: 35px;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  button:hover {
+    color: #00a7a7;
+  }
+}
+
+.box_summary {
+ padding-top: 16px;
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  background-color: rgba(0, 0, 86, 1);
+
+  button {
+    margin-bottom: 15px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(17, 0, 255);
+    margin-left: 15px;
+    font-size: 30px;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  button:hover {
+    color: black;
+  }
+}
+
+.back_back {
+  margin-top: 70px;
+  background-color: rgba(0, 0, 86, 1);
+  padding-bottom: 60px;
+}
+
+.back_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    padding: 20px 30px;
+    color: rgba(0, 0, 86, 1);
+    background-color: #00a7a7;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 60px;
+  }
+
+}
+
+.back_link {
+  text-decoration: none;
+  color:rgba(0, 0, 86, 1);
+  font-family:'Rajdhani', sans-serif;
+  font-size: 30px;
+  background-color: #00afaf;
+  padding: 15px 245px;
+  border-radius: 2px;
+
+}
+
+.back_link:hover {
+  color:white;
+}
+.confirmation_back {
+  margin-top:70px;
+  background-color: rgba(0, 0, 86, 1);
+}
+
+.confirmation_content {
+  font-family: 'Rajdhani', sans-serif;
+  color:white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.confirm_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  input {
+    font-size: 20px;
+  }
+
+  input:last-of-type {
+    font-family: 'Rajdhani', sans-serif;
+    color:white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+    background-color: rgb(17, 0, 255);
+  }
+
+  input:last-of-type:hover {
+    color:rgba(0, 0, 86, 1);
+  }
+
+}
+
+
