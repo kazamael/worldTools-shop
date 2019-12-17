@@ -4,10 +4,11 @@ import './style.scss'
 import {Link} from "react-router-dom";
 
 export const MainProduct = props => {
+    let onClickClick = () => window.location.reload()
     const {products, handleButtonClick, handleProductClick, cart} = props;
     return (
         <div className="mainProduct_back">
-            {cart !== 0 && <button className="cart_button"><Link className="nav_item_link2" to="/cart">+{cart}</Link></button>}
+            {cart !== 0 && <button onClick={onClickClick} className="cart_button"><Link className="nav_item_link2" to="/cart">+{cart}</Link></button>}
 
             <div className="container">
                 <section className="products_section">

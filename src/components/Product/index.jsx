@@ -2,10 +2,12 @@ import React from "react";
 
 import {MainProduct} from "./mainProducts";
 import {DescriptionProduct} from "./description";
+import * as firebase from "firebase";
 
 let done = false;
 
 class Product extends React.Component {
+
     state = {
         products: [],
         clickedProduct: [],
@@ -15,52 +17,81 @@ class Product extends React.Component {
     };
 
     componentDidMount() {
-        const URL = `http://localhost:3000/tools`;
-        fetch(URL)
-            .then(data => data.json())
-            .then(tools =>
-                tools.map(el => {
-                    this.setState({
-                        products: [...this.state.products, el]
-                    })
+
+        firebase.database().ref('tools/').on('value', snapshot => {
+            const toolsObject = snapshot.val();
+            const toolsList = Object.keys(toolsObject).map(key => ({
+                ...toolsObject[key],
+                uid: key,
+            }));
+
+                this.setState({
+                    products: toolsList
                 })
-            )
-            .catch(error => console.log(error));
+        })
+        firebase.database().ref('orders/0/').on('value', snapshot => {
+            const ordersObject = snapshot.val();
+            if (ordersObject.order !== undefined) {
+                const ordersList = Object.keys(ordersObject.order).map(key => ({
+                    ...ordersObject.order[key],
+                    uid: key,
+                }));
+                this.setState({
+                    cart:ordersList.length
+                })
+            }
+        })
+
     };
+
+
+
 
     handleButtonClick = (id) => {
         const givenElement = this.state.products.find(el => el.id === id);
-        this.setState({
-            cart: this.state.cart + 1
-        });
-        const URL = `http://localhost:3000/orders/${this.state.id}`;
-        givenElement.quantity = 1;
-        fetch(URL)
-            .then(data => data.json())
-            .then(data => {
-                    const finder = data.order.find(el => el.id === id)
-                    if (finder) {
-                        finder.quantity = finder.quantity + 1
-                    }
-                    {
-                        !finder ?
-                            fetch(URL, {
-                                method: "PATCH",
-                                body: JSON.stringify({order: [...data.order, givenElement]}),
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                }
-                            }) :
-                            fetch(URL, {
-                                method: "PATCH",
-                                body: JSON.stringify({order: [...data.order]}),
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                }
-                            })
-                    }
+
+        firebase.database().ref('orders/0/').on('value', snapshot => {
+            const ordersObject = snapshot.val();
+            if (ordersObject.order === undefined) {
+                this.setState({
+                    cart: this.state.cart + 1
+                });
+                firebase.database().ref('orders/0/order/' + givenElement.id).set({
+                    brand: givenElement.brand,
+                    description: givenElement.description,
+                    id: givenElement.id,
+                    name: givenElement.name,
+                    price: givenElement.price,
+                    quantity: 1,
+                    urls: givenElement.urls
+                });
+
+
+            } else {
+
+                const orderList = Object.keys(ordersObject.order).map(key => ({
+                    ...ordersObject.order[key],
+                    uid: key,
+                }));
+                const finder = orderList.find(el => el.id === id);
+                if (finder === undefined) {
+                    this.setState({
+                        cart: this.state.cart + 1
+                    });
+                    firebase.database().ref('orders/0/order/' + givenElement.id).set({
+                        brand: givenElement.brand,
+                        description: givenElement.description,
+                        id: givenElement.id,
+                        name: givenElement.name,
+                        price: givenElement.price,
+                        quantity: 1,
+                        urls: givenElement.urls
+                    });
                 }
-            );
+            }
+
+
+        })
     };
 
 

@@ -6,9 +6,11 @@ import {Confirm} from "./Confirm";
 import {BackToShopping} from "./BackToShopping";
 import './style.scss'
 import {idd} from "../Product";
+import * as firebase from "firebase";
 
 
 class ToBuy extends React.Component {
+
     state = {
         toBuyItems: [],
         ids: [],
@@ -22,91 +24,49 @@ class ToBuy extends React.Component {
 
     componentDidMount() {
 
-
-        const URL = `http://localhost:3000/orders/${this.state.id}`;
-        fetch(URL)
-            .then(data => data.json())
-            .then(data => this.setState({
-                    toBuyItems: data.order
+        firebase.database().ref('orders/0/').on('value', snapshot => {
+            const ordersObject = snapshot.val();
+            if (ordersObject.order !== undefined) {
+                const ordersList = Object.keys(ordersObject.order).map(key => ({
+                    ...ordersObject.order[key],
+                    uid: key,
+                }));
+                ordersList.map(el => {
+                    this.setState({
+                        toBuyItems: ordersList
+                    })
                 })
-            );
+            }
+        })
+
     }
 
-    handlePlusClick = (id) => {
-        const URL = `http://localhost:3000/orders/${this.state.id}`;
-        fetch(URL)
-            .then(data => data.json())
-            .then(data => {
-                    const finder = data.order.find(el => el.id === id)
-                    finder.quantity = finder.quantity + 1
-                    this.setState({
-                        toBuyItems: data.order
-                    })
-                    fetch(URL, {
-                        method: "PATCH",
-                        body: JSON.stringify({order: [...data.order]}),
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
 
-                }
-            );
+
+
+    handlePlusClick = (id) => {
+        const finder=this.state.toBuyItems.find(el=> el.id===id)
+        firebase.database().ref('orders/0/order/'+id).update({
+            quantity:finder.quantity+1
+        })
     };
 
     handleMinusClick = (id) => {
-
-
-        const URL = `http://localhost:3000/orders/${this.state.id}`;
-        fetch(URL)
-            .then(data => data.json())
-            .then(data => {
-                    const finder = data.order.find(el => el.id === id)
-                    if (finder.quantity > 0) {
-                        finder.quantity = finder.quantity - 1
-                        this.setState({
-                            toBuyItems: data.order
-                        })
-                        fetch(URL, {
-                            method: "PATCH",
-                            body: JSON.stringify({order: [...data.order]}),
-                            headers: {
-                                'Content-Type': 'application/json'
-                            }
-                        })
-
-                    }
-                }
-            );
+        const finder = this.state.toBuyItems.find(el => el.id === id)
+        if (finder.quantity > 1) {
+        firebase.database().ref('orders/0/order/' + id).update({
+            quantity: finder.quantity - 1
+        })
+    }
 
 
     };
 
     handleDeleteClick = (id) => {
-
-        const URL = `http://localhost:3000/orders/${this.state.id}`;
-        fetch(URL)
-            .then(data => data.json())
-            .then(data => {
-                    const finder = data.order.find(el => el.id === id)
-                    const slicer = data.order.indexOf(finder);
-                    const withoutDeleted = data.order
-                    withoutDeleted.splice(slicer, 1)
-                    this.setState({
-                        toBuyItems: withoutDeleted
-                    })
-
-                    fetch(URL, {
-                        method: "PATCH",
-                        body: JSON.stringify({order: withoutDeleted}),
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
-
-                }
-            );
-
+        console.log(id);
+        firebase.database().ref('orders/0/order/' + id).remove()
+        if(this.state.toBuyItems.length<=1)
+        {window.location.reload()}
 
     };
 
@@ -124,35 +84,18 @@ class ToBuy extends React.Component {
 
     handleSubmitClick = (e) => {
         e.preventDefault()
-        const URL = `http://localhost:3000/orders/${this.state.id}`;
-        fetch(URL, {
-            method: "PATCH",
-            body: JSON.stringify({
-                orderOwner: this.state.nameSurname,
-                address: this.state.address
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
+
+        firebase.database().ref('orders/0/').update({
+            orderOwner: this.state.nameSurname,
+            address: this.state.address
         }).then(() => this.setState({
             confirmation: true
         }))
 
     };
 
-    handleBackClick =()=>{
-        const URL = `http://localhost:3000/orders/${this.state.id}`;
-        fetch(URL, {
-            method: "PATCH",
-            body: JSON.stringify({
-                orderOwner:"",
-                address:"",
-                order:[],
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-    })
+    handleBackClick = () => {
+        firebase.database().ref('orders/0/order/').remove()
     };
 
     render() {

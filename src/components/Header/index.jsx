@@ -5,6 +5,7 @@ import './style.scss'
 
 
 const Header = () => {
+    let onClickClick=()=> window.location.reload()
 
     return (
         <div className="header_back">
@@ -18,7 +19,7 @@ const Header = () => {
                 <nav>
                     <ul className="nav">
                         <li className="nav_item"><Link className="nav_item_link" to="/products">Produkty</Link></li>
-                        <li className="nav_item"><Link className="nav_item_link" to="/cart">Koszyk</Link></li>
+                        <li onClick={onClickClick} className="nav_item"><Link className="nav_item_link" to="/cart">Koszyk</Link></li>
                         <li className="nav_item"><Link className="nav_item_link" to="/contact">Kontakt</Link></li>
                     </ul>
                 </nav>
