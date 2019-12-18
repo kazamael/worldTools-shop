@@ -73,7 +73,7 @@ export class DescriptionProduct extends React.Component {
                     clickedProduct={clickedProduct}
                 />}
                 <div className="description_back">
-                    {cart !== 0 && <button className="cart_button"><Link className="nav_item_link2" to="/cart">+{cart}</Link></button>}
+                    {cart !== 0 && <button className="cart_button"><Link className="nav_item_link2" to="/cart">+{cart.length}</Link></button>}
                     <section className="container">
                         <article className="description_content">
                             <div className="description_images">

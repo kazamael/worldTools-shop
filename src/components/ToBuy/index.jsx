@@ -5,8 +5,10 @@ import {Box} from "./Box";
 import {Confirm} from "./Confirm";
 import {BackToShopping} from "./BackToShopping";
 import './style.scss'
-import {idd} from "../Product";
 import * as firebase from "firebase";
+
+
+
 
 
 class ToBuy extends React.Component {
@@ -19,7 +21,6 @@ class ToBuy extends React.Component {
         data: {},
         nameSurname: "",
         address: "",
-        id: 1
     };
 
     componentDidMount() {
@@ -31,11 +32,9 @@ class ToBuy extends React.Component {
                     ...ordersObject.order[key],
                     uid: key,
                 }));
-                ordersList.map(el => {
                     this.setState({
                         toBuyItems: ordersList
-                    })
-                })
+                    },()=>console.log(this.props.cart))
             }
         })
 
@@ -130,6 +129,5 @@ class ToBuy extends React.Component {
         }
     }
 }
-
 
 export default ToBuy;

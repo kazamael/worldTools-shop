@@ -4,15 +4,14 @@ import {MainProduct} from "./mainProducts";
 import {DescriptionProduct} from "./description";
 import * as firebase from "firebase";
 
-let done = false;
+import { connect } from "react-redux";
+import { cartFetched } from "../Actions";
+import {productFetched} from "../Actions";
 
 class Product extends React.Component {
 
     state = {
-        products: [],
-        clickedProduct: [],
-        cart: 0,
-        id: 1
+        clickedProduct: []
 
     };
 
@@ -25,10 +24,8 @@ class Product extends React.Component {
                 uid: key,
             }));
 
-                this.setState({
-                    products: toolsList
-                })
-        })
+                this.props.productFetched(toolsList)
+        });
         firebase.database().ref('orders/0/').on('value', snapshot => {
             const ordersObject = snapshot.val();
             if (ordersObject.order !== undefined) {
@@ -36,9 +33,7 @@ class Product extends React.Component {
                     ...ordersObject.order[key],
                     uid: key,
                 }));
-                this.setState({
-                    cart:ordersList.length
-                })
+                this.props.cartFetched(ordersList)
             }
         })
 
@@ -46,16 +41,12 @@ class Product extends React.Component {
 
 
 
-
     handleButtonClick = (id) => {
-        const givenElement = this.state.products.find(el => el.id === id);
+        const givenElement = this.props.product.find(el => el.id === id);
 
         firebase.database().ref('orders/0/').on('value', snapshot => {
             const ordersObject = snapshot.val();
             if (ordersObject.order === undefined) {
-                this.setState({
-                    cart: this.state.cart + 1
-                });
                 firebase.database().ref('orders/0/order/' + givenElement.id).set({
                     brand: givenElement.brand,
                     description: givenElement.description,
@@ -75,9 +66,6 @@ class Product extends React.Component {
                 }));
                 const finder = orderList.find(el => el.id === id);
                 if (finder === undefined) {
-                    this.setState({
-                        cart: this.state.cart + 1
-                    });
                     firebase.database().ref('orders/0/order/' + givenElement.id).set({
                         brand: givenElement.brand,
                         description: givenElement.description,
@@ -96,7 +84,7 @@ class Product extends React.Component {
 
 
     handleProductClick = (id) => {
-        const givenElement = this.state.products.find(el => el.id === id);
+        const givenElement = this.props.product.find(el => el.id === id);
         this.setState({
             clickedProduct: [...this.state.clickedProduct, givenElement]
         })
@@ -111,8 +99,9 @@ class Product extends React.Component {
 
 
     render() {
-        const {products, clickedProduct, cart} = this.state;
-        if (products.length < 1) {
+        const {cart,product} = this.props;
+        const {clickedProduct} = this.state;
+        if (product.length < 1) {
             return null;
 
         } else {
@@ -120,7 +109,7 @@ class Product extends React.Component {
                 return (
                     <MainProduct
                         cart={cart}
-                        products={products}
+                        products={product}
                         handleProductClick={this.handleProductClick}
                         handleButtonClick={this.handleButtonClick}
                     />
@@ -130,7 +119,7 @@ class Product extends React.Component {
                 return (
                     <DescriptionProduct
                         cart={cart}
-                        products={products}
+                        products={product}
                         clickedProduct={clickedProduct}
                         handleBackClick={this.handleBackClick}
                         handleBuyClick={this.handleButtonClick}
@@ -143,4 +132,15 @@ class Product extends React.Component {
 }
 
 
-export default Product;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.cart,
+        product:state.product // (1)
+    }
+};
+const mapDispatchToProps = { cartFetched, productFetched }; // (2)
+
+const ProductContainer = connect(mapStateToProps, mapDispatchToProps)(Product); // (3)
+
+
+export default ProductContainer;
